@@ -1,7 +1,7 @@
 const NotesPage = () => {
 
     return (
-        <div className="container pt-5">
+        <div className="container rounded notes-card-area">
             <p>My Notes</p>
             <p>...Notes cards</p>
         </div>

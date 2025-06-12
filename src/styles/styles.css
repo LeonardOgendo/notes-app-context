@@ -1,4 +1,30 @@
-.home {
+.main {
+    height: 100vh;
+}
+.app-layout {
     width: 70%;
     margin: 0 auto;
+    padding-top: 3.5rem;
+}
+
+.search-box {
+    border-radius: 5px;
+    border: none;
+    padding: 3px 10px;
+    font-size: 0.9rem;
+}
+.search-box:focus {
+    outline: none;
+}
+.add-note-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.add-note-txt {
+    font-size: 0.85rem;
+}
+.notes-card-area {
+    border: 1px solid #777;
+    margin-top: 1.5rem;
 }

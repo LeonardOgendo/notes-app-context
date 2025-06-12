@@ -7,7 +7,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <AppLayout />,
         children: [
-            { path: "/", element: <NotesPage /> },
+            { index: true, element: <NotesPage /> },
         ],
     },
 ])

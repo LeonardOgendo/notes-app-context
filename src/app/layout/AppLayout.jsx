@@ -6,9 +6,9 @@ import Topbar from './Topbar';
 
 const AppLayout = () => {
   return (
-    <div className="app-layout">
+    <div className="d-flex app-layout">
       <Sidebar />
-      <div className="main-content">
+      <div className="main-content flex-fill">
         <Topbar />
         <div className="content">
           <Outlet />

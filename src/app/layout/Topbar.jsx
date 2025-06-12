@@ -1,7 +1,5 @@
-// Create a topbar component with a search bar to the left and dark/light theme toggler to the right
-// Use Bootstrap classes for styling and React Icons for the search and theme toggler icons.
 import { useState } from 'react';
-import { FaSearch, FaSun, FaMoon } from 'react-icons/fa';
+import { FaSearch, FaSun, FaMoon, FaPlus } from 'react-icons/fa';
 
 const Topbar = ({ toggleTheme, isDarkMode }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -17,22 +15,27 @@ const Topbar = ({ toggleTheme, isDarkMode }) => {
   };
 
   return (
-    <nav bg="light" className="topbar">
-      <form onSubmit={handleSearchSubmit} className="me-auto">
+    <nav bg="light" className="d-flex justify-content-between">
+      <form onSubmit={handleSearchSubmit}>
         <input
           type="text"
           placeholder="Search..."
           value={searchQuery}
           onChange={handleSearchChange}
-          className="form-control mr-sm-2"
+          className="search-box"
         />
-        <button type="submit" variant="outline-secondary">
-          <FaSearch />
-        </button>
+
       </form>
-      <button variant="outline-secondary" onClick={toggleTheme}>
-        {isDarkMode ? <FaSun /> : <FaMoon />}
-      </button>
+     
+      <div className='d-flex'>
+        <button className="d-flex align-items-center add-note-btn bg-primary text-white me-3">
+          <FaPlus className="me-2 "/>
+          <span className="me-2 add-note-txt">Add Note</span>
+        </button>
+        <span className='text-white ms-2 fs-6' onClick={toggleTheme}>
+          {isDarkMode ? <FaSun /> : <FaMoon />}
+        </span>
+      </div>
     </nav>
   );
 }
